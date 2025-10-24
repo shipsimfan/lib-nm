@@ -5,7 +5,7 @@ version = 4
 [[package]]
 name = "glib-2"
 version = "0.1.0"
-source = "git+https://github.com/shipsimfan/glib-2#c8f7a254a0af6f4b21decbd5ad65a30ef2ae7324"
+source = "git+https://github.com/shipsimfan/glib-2#a8d1646d2a6b1bf994a8c475fbcd297110c1ac54"
 
 [[package]]
 name = "nm"

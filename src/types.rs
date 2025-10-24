@@ -5,3 +5,6 @@ use std::ffi::c_void;
 /// associated `#GMainContext`, D-Bus signals gets processed and the `#NMClient` instance updates
 /// and emits `#GObject` signals.
 pub type NMClient = c_void;
+
+#[allow(missing_docs)]
+pub type NMActiveConnection = c_void;

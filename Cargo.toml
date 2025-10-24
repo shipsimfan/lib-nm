@@ -3,7 +3,10 @@ name = "nm"
 description = "libnm (Network Manager) raw bindings"
 version = "0.1.0"
 authors = ["Lance Hart <me@lancehart.ca>"]
-edition = "2021"
-repository = "https://github.com/shipsimfan/lib-win32"
+edition = "2024"
+repository = "https://github.com/shipsimfan/lib-nm"
 license = "GPL-3.0-or-later"
 publish = false
+
+[dependencies]
+glib-2.git = "https://github.com/shipsimfan/glib-2"

@@ -1,14 +1,16 @@
-use crate::NMIPAddress;
-use std::ffi::c_char;
+use crate::{NMIPAddress, NMSettingIPConfig};
+use std::ffi::c_int;
 
 #[link(name = "nm")]
 unsafe extern "C" {
-    /// Gets the IP address property of this address object.
-    ///
     /// # Parameters
-    ///  * `address` - the [`NMIPAddress`]
+    ///  * `setting` - the [`NMSettingIPConfig`]
+    ///  * `idx` - index number of the address to return
     ///
     /// # Returns
-    ///  the IP address
-    pub fn nm_ip_address_get_address(address: *mut NMIPAddress) -> *const c_char;
+    /// the address at index `idx`.
+    pub fn nm_setting_ip_config_get_address(
+        setting: *mut NMSettingIPConfig,
+        idx: c_int,
+    ) -> *mut NMIPAddress;
 }

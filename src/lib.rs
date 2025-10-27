@@ -7,7 +7,7 @@
 #![warn(rustdoc::broken_intra_doc_links)]
 
 mod functions;
-mod types;
+mod objects;
 
 pub use functions::*;
-pub use types::*;
+pub use objects::*;

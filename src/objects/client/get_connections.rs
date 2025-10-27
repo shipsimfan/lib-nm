@@ -1,6 +1,10 @@
 use crate::NMClient;
 use glib_2::glib::GPtrArray;
 
+// rustdoc imports
+#[allow(unused_imports)]
+use crate::nm_connection_verify;
+
 #[link(name = "nm")]
 unsafe extern "C" {
     /// # Parameters

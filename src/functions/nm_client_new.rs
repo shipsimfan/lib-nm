@@ -3,6 +3,8 @@ use glib_2::{gio::GCancellable, glib::GError};
 
 // rustdoc imports
 #[allow(unused_imports)]
+use glib_2::gobject::GObject;
+#[allow(unused_imports)]
 use std::ptr::null_mut;
 
 #[link(name = "nm")]

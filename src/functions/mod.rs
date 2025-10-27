@@ -1,8 +1,12 @@
+mod nm_active_connection_get_connection_type;
+mod nm_active_connection_get_id;
 mod nm_client_get_active_connections;
 mod nm_client_get_version;
 mod nm_client_new;
 mod nm_device_get_iface;
 
+pub use nm_active_connection_get_connection_type::nm_active_connection_get_connection_type;
+pub use nm_active_connection_get_id::nm_active_connection_get_id;
 pub use nm_client_get_active_connections::nm_client_get_active_connections;
 pub use nm_client_get_version::nm_client_get_version;
 pub use nm_client_new::nm_client_new;

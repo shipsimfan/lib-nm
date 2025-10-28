@@ -1,11 +1,17 @@
 use std::ffi::c_void;
 
+mod add_address;
+mod add_dns;
+mod add_route;
 mod get_address;
 mod get_dns;
 mod get_gateway;
 mod get_num_addresses;
 mod get_num_dns;
 
+pub use add_address::nm_setting_ip_config_add_address;
+pub use add_dns::nm_setting_ip_config_add_dns;
+pub use add_route::nm_setting_ip_config_add_route;
 pub use get_address::nm_setting_ip_config_get_address;
 pub use get_dns::nm_setting_ip_config_get_dns;
 pub use get_gateway::nm_setting_ip_config_get_gateway;

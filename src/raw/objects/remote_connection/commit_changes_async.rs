@@ -1,12 +1,12 @@
 use crate::raw::NMRemoteConnection;
-use glib_2::{
+use glib_2::raw::{
     gio::{GAsyncReadyCallback, GCancellable},
     glib::{gboolean, gpointer},
 };
 
 // rustdoc imports
 #[allow(unused_imports)]
-use glib_2::glib::{FALSE, TRUE};
+use glib_2::raw::glib::{FALSE, TRUE};
 #[allow(unused_imports)]
 use std::ptr::null_mut;
 

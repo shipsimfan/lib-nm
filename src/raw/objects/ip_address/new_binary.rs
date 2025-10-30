@@ -1,5 +1,5 @@
 use crate::raw::NMIPAddress;
-use glib_2::glib::{GError, gconstpointer, guint};
+use glib_2::raw::glib::{GError, gconstpointer, guint};
 use std::ffi::c_int;
 
 // rustdoc imports

@@ -1,11 +1,11 @@
 use crate::raw::NMConnection;
-use glib_2::glib::{GError, gboolean};
+use glib_2::raw::glib::{GError, gboolean};
 
 // rustdoc imports
 #[allow(unused_imports)]
 use crate::raw::{NMSettingWired, NMSettingWireless, NMSettingWirelessSecurity};
 #[allow(unused_imports)]
-use glib_2::glib::{FALSE, TRUE};
+use glib_2::raw::glib::{FALSE, TRUE};
 #[allow(unused_imports)]
 use std::ptr::null_mut;
 

@@ -1,5 +1,5 @@
 use crate::raw::NMIPAddress;
-use glib_2::glib::guint;
+use glib_2::raw::glib::guint;
 
 #[link(name = "nm")]
 unsafe extern "C" {

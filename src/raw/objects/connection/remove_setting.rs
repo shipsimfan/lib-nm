@@ -1,5 +1,5 @@
 use crate::raw::NMConnection;
-use glib_2::gobject::GType;
+use glib_2::raw::gobject::GType;
 
 // rustdoc imports
 #[allow(unused_imports)]

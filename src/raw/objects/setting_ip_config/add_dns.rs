@@ -1,12 +1,12 @@
 use crate::raw::NMSettingIPConfig;
-use glib_2::glib::gboolean;
+use glib_2::raw::glib::gboolean;
 use std::ffi::c_char;
 
 // rustdoc imports
 #[allow(unused_imports)]
 use crate::raw::nm_connection_verify;
 #[allow(unused_imports)]
-use glib_2::glib::{FALSE, TRUE};
+use glib_2::raw::glib::{FALSE, TRUE};
 
 #[link(name = "nm")]
 unsafe extern "C" {

@@ -1,5 +1,5 @@
 use crate::raw::NMDeviceWifi;
-use glib_2::glib::GPtrArray;
+use glib_2::raw::glib::GPtrArray;
 
 // rustdoc imports
 #[allow(unused_imports)]

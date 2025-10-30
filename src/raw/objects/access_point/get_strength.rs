@@ -1,5 +1,5 @@
 use crate::raw::NMAccessPoint;
-use glib_2::glib::guint8;
+use glib_2::raw::glib::guint8;
 
 #[link(name = "nm")]
 unsafe extern "C" {

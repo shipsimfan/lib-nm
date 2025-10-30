@@ -1,4 +1,4 @@
-use glib_2::gobject::GType;
+use glib_2::raw::gobject::GType;
 
 #[link(name = "nm")]
 unsafe extern "C" {

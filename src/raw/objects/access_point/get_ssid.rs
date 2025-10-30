@@ -1,5 +1,5 @@
 use crate::raw::NMAccessPoint;
-use glib_2::glib::GBytes;
+use glib_2::raw::glib::GBytes;
 
 // rustdoc imports
 #[allow(unused_imports)]

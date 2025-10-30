@@ -1,5 +1,5 @@
 use crate::raw::NMRemoteConnection;
-use glib_2::{
+use glib_2::raw::{
     gio::GAsyncResult,
     glib::{GError, gboolean},
 };
@@ -8,7 +8,7 @@ use glib_2::{
 #[allow(unused_imports)]
 use crate::raw::nm_remote_connection_commit_changes_async;
 #[allow(unused_imports)]
-use glib_2::{
+use glib_2::raw::{
     gio::GAsyncReadyCallback,
     glib::{FALSE, TRUE},
 };

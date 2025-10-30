@@ -1,7 +1,9 @@
+mod access_point;
 mod active_connection;
 mod client;
 mod connection;
 mod device;
+mod device_wifi;
 mod ip_address;
 mod ip_config;
 mod ip_route;
@@ -14,10 +16,12 @@ mod setting_wired;
 mod setting_wireless;
 mod setting_wireless_security;
 
+pub use access_point::*;
 pub use active_connection::*;
 pub use client::*;
 pub use connection::*;
 pub use device::*;
+pub use device_wifi::*;
 pub use ip_address::*;
 pub use ip_config::*;
 pub use ip_route::*;

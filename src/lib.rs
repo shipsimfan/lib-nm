@@ -7,3 +7,15 @@
 #![warn(rustdoc::broken_intra_doc_links)]
 
 pub mod raw;
+
+pub use raw::NMDeviceType;
+
+mod access_point;
+mod client;
+mod device;
+mod device_wifi;
+
+pub use access_point::{NMAccessPoint, NMAccessPointIter};
+pub use client::NMClient;
+pub use device::{NMDevice, NMDeviceIter};
+pub use device_wifi::NMDeviceWifi;

@@ -10,5 +10,5 @@ unsafe extern "C" {
     ///
     /// # Returns
     ///  the maximum bit rate (kbit/s)
-    pub fn nm_access_point_get_max_bitrate(ap: *mut NMAccessPoint) -> *mut guint32;
+    pub fn nm_access_point_get_max_bitrate(ap: *mut NMAccessPoint) -> guint32;
 }

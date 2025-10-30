@@ -1,4 +1,4 @@
-use crate::NMIPAddress;
+use crate::raw::NMIPAddress;
 use glib_2::glib::{GError, gconstpointer, guint};
 use std::ffi::c_int;
 

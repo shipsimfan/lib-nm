@@ -1,4 +1,4 @@
-use crate::NMClient;
+use crate::raw::NMClient;
 use glib_2::{gio::GCancellable, glib::GError};
 
 // rustdoc imports

@@ -1,9 +1,9 @@
-use crate::NMDeviceWifi;
+use crate::raw::NMDeviceWifi;
 use glib_2::glib::GPtrArray;
 
 // rustdoc imports
 #[allow(unused_imports)]
-use crate::NMAccessPoint;
+use crate::raw::NMAccessPoint;
 
 #[link(name = "nm")]
 unsafe extern "C" {

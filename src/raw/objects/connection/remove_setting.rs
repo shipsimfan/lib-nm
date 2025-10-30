@@ -1,9 +1,9 @@
-use crate::NMConnection;
+use crate::raw::NMConnection;
 use glib_2::gobject::GType;
 
 // rustdoc imports
 #[allow(unused_imports)]
-use crate::NMSetting;
+use crate::raw::NMSetting;
 
 #[link(name = "nm")]
 unsafe extern "C" {

@@ -1,10 +1,10 @@
-use crate::NMSettingIPConfig;
+use crate::raw::NMSettingIPConfig;
 use glib_2::glib::gboolean;
 use std::ffi::c_char;
 
 // rustdoc imports
 #[allow(unused_imports)]
-use crate::nm_connection_verify;
+use crate::raw::nm_connection_verify;
 #[allow(unused_imports)]
 use glib_2::glib::{FALSE, TRUE};
 

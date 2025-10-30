@@ -1,4 +1,4 @@
-use crate::NMDevice;
+use crate::raw::NMDevice;
 use std::ffi::c_char;
 
 #[link(name = "nm")]

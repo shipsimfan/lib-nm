@@ -1,4 +1,4 @@
-use crate::NMSettingIPConfig;
+use crate::raw::NMSettingIPConfig;
 use std::ffi::c_char;
 
 // rustdoc imports

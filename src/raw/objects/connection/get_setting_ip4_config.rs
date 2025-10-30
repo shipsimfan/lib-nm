@@ -1,8 +1,8 @@
-use crate::{NMConnection, NMSettingIPConfig};
+use crate::raw::{NMConnection, NMSettingIPConfig};
 
 // rustdoc imports
 #[allow(unused_imports)]
-use crate::NMSettingIP4Config;
+use crate::raw::NMSettingIP4Config;
 
 #[link(name = "nm")]
 unsafe extern "C" {

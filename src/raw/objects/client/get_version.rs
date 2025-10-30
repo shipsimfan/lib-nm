@@ -1,4 +1,4 @@
-use crate::NMClient;
+use crate::raw::NMClient;
 use std::ffi::c_char;
 
 // rustdoc imports

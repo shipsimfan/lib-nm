@@ -1,9 +1,9 @@
-use crate::NMConnection;
+use crate::raw::NMConnection;
 use std::ffi::c_char;
 
 // rustdoc imports
 #[allow(unused_imports)]
-use crate::NMSettingConnection;
+use crate::raw::NMSettingConnection;
 
 #[link(name = "nm")]
 unsafe extern "C" {

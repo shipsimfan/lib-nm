@@ -1,4 +1,4 @@
-use crate::NMAccessPoint;
+use crate::raw::NMAccessPoint;
 use glib_2::glib::guint8;
 
 #[link(name = "nm")]

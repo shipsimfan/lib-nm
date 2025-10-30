@@ -1,4 +1,4 @@
-use crate::NMIPConfig;
+use crate::raw::NMIPConfig;
 use std::ffi::c_char;
 
 #[link(name = "nm")]

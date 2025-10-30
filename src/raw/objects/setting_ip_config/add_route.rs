@@ -1,4 +1,4 @@
-use crate::{NMIPRoute, NMSettingIPConfig};
+use crate::raw::{NMIPRoute, NMSettingIPConfig};
 use glib_2::glib::gboolean;
 
 // rustdoc imports

@@ -1,4 +1,4 @@
-use crate::NMIPAddress;
+use crate::raw::NMIPAddress;
 use glib_2::glib::guint;
 
 #[link(name = "nm")]

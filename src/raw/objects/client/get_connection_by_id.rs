@@ -1,9 +1,9 @@
-use crate::{NMClient, NMRemoteConnection};
+use crate::raw::{NMClient, NMRemoteConnection};
 use std::ffi::c_char;
 
 // rustdoc imports
 #[allow(unused_imports)]
-use crate::nm_connection_verify;
+use crate::raw::nm_connection_verify;
 #[allow(unused_imports)]
 use std::ptr::null_mut;
 

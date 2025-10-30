@@ -1,4 +1,4 @@
-use crate::NMIPRoute;
+use crate::raw::NMIPRoute;
 use glib_2::glib::{GError, gconstpointer, gint64, guint};
 use std::ffi::c_int;
 

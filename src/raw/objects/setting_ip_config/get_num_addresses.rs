@@ -1,4 +1,4 @@
-use crate::NMSettingIPConfig;
+use crate::raw::NMSettingIPConfig;
 use glib_2::glib::guint;
 
 #[link(name = "nm")]

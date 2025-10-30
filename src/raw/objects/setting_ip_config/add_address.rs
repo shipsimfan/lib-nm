@@ -1,4 +1,4 @@
-use crate::{NMIPAddress, NMSettingIPConfig};
+use crate::raw::{NMIPAddress, NMSettingIPConfig};
 use glib_2::glib::gboolean;
 
 // rustdoc imports

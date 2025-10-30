@@ -1,4 +1,4 @@
-use crate::NMRemoteConnection;
+use crate::raw::NMRemoteConnection;
 use glib_2::{
     gio::{GAsyncReadyCallback, GCancellable},
     glib::{gboolean, gpointer},

@@ -1,4 +1,4 @@
-use crate::NMIPAddress;
+use crate::raw::NMIPAddress;
 
 #[link(name = "nm")]
 unsafe extern "C" {

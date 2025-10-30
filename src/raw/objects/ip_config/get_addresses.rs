@@ -1,9 +1,9 @@
-use crate::NMIPConfig;
+use crate::raw::NMIPConfig;
 use glib_2::glib::GPtrArray;
 
 // rustdoc imports
 #[allow(unused_imports)]
-use crate::NMIPAddress;
+use crate::raw::NMIPAddress;
 
 #[link(name = "nm")]
 unsafe extern "C" {

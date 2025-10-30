@@ -1,4 +1,4 @@
-use crate::{NMIPAddress, NMSettingIPConfig};
+use crate::raw::{NMIPAddress, NMSettingIPConfig};
 use std::ffi::c_int;
 
 #[link(name = "nm")]

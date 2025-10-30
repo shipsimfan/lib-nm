@@ -1,4 +1,4 @@
-use crate::{NMActiveConnection, NMIPConfig};
+use crate::raw::{NMActiveConnection, NMIPConfig};
 
 // rustdoc imports
 #[allow(unused_imports)]

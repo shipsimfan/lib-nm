@@ -1,4 +1,4 @@
-use crate::{NMConnection, NMSetting};
+use crate::raw::{NMConnection, NMSetting};
 
 #[link(name = "nm")]
 unsafe extern "C" {

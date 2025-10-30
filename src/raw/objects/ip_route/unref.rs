@@ -1,4 +1,4 @@
-use crate::NMIPRoute;
+use crate::raw::NMIPRoute;
 
 #[link(name = "nm")]
 unsafe extern "C" {

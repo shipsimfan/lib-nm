@@ -1,4 +1,4 @@
-use crate::{NMDevice, NMDeviceType};
+use crate::raw::{NMDevice, NMDeviceType};
 
 #[link(name = "nm")]
 unsafe extern "C" {

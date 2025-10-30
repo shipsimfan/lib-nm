@@ -1,6 +1,6 @@
 [package]
 name = "nm"
-description = "libnm (Network Manager) raw bindings"
+description = "libnm (Network Manager) bindings"
 version = "0.1.0"
 authors = ["Lance Hart <me@lancehart.ca>"]
 edition = "2024"

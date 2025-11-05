@@ -1,3 +1,3 @@
-mod nm_client_new;
+mod nm_utils_uuid_generate;
 
-pub use nm_client_new::nm_client_new;
+pub use nm_utils_uuid_generate::nm_utils_uuid_generate;

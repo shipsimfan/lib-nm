@@ -2,6 +2,8 @@ use crate::{NMClient, raw};
 
 mod iter;
 
+mod active_connection;
+mod filter_connections;
 mod get;
 mod iface;
 mod new;
@@ -16,6 +18,5 @@ pub struct NMDevice<'client> {
     handle: *mut raw::NMDevice,
 
     /// The client this device came from
-    #[allow(unused)]
-    client: &'client NMClient,
+    client: Option<&'client NMClient>,
 }

@@ -4,5 +4,5 @@ mod get_access_points;
 
 pub use get_access_points::nm_device_wifi_get_access_points;
 
-/// [`NMDeviceWifi`]
+#[allow(missing_docs)]
 pub type NMDeviceWifi = c_void;

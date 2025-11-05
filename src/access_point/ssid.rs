@@ -1,21 +1,15 @@
 use crate::{NMAccessPoint, raw::nm_access_point_get_ssid};
-use glib_2::raw::glib::g_bytes_get_data;
+use glib_2::glib::GBytes;
 use std::ptr::null_mut;
 
 impl<'client, 'device> NMAccessPoint<'client, 'device> {
     /// Get the SSID of the access point
-    pub fn ssid(&self) -> &[u8] {
-        let bytes = unsafe { nm_access_point_get_ssid(self.handle) };
-        if bytes == null_mut() {
-            return &[];
+    pub fn ssid(&self) -> Option<GBytes> {
+        let handle = unsafe { nm_access_point_get_ssid(self.handle) };
+        if handle == null_mut() {
+            return None;
         }
 
-        let mut size = 0;
-        let ptr = unsafe { g_bytes_get_data(bytes, &mut size) };
-        if size == 0 {
-            return &[];
-        }
-
-        unsafe { std::slice::from_raw_parts(ptr.cast(), size) }
+        Some(unsafe { GBytes::new_raw(handle, false) })
     }
 }

@@ -9,7 +9,7 @@ impl NMClient {
 
     /// Get the raw [`CStr`] of the version of NetworkManager connected to
     pub fn version_raw(&self) -> Option<&CStr> {
-        let ptr = unsafe { nm_client_get_version(self.handle) };
+        let ptr = unsafe { nm_client_get_version(self.handle()) };
 
         if ptr == null() {
             return None;

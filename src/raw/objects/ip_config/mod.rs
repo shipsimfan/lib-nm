@@ -8,5 +8,5 @@ pub use get_addresses::nm_ip_config_get_addresses;
 pub use get_gateway::nm_ip_config_get_gateway;
 pub use get_nameservers::nm_ip_config_get_nameservers;
 
-/// [`NMIPConfig`]
+#[allow(missing_docs)]
 pub type NMIPConfig = c_void;

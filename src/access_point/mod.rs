@@ -3,10 +3,14 @@ use crate::{NMDeviceWifi, raw};
 mod iter;
 
 mod bssid;
+mod filter_connections;
+mod get;
 mod max_bitrate;
 mod new;
+mod rsn_flags;
 mod ssid;
 mod strength;
+mod wpa_flags;
 
 pub use iter::NMAccessPointIter;
 
@@ -17,6 +21,5 @@ pub struct NMAccessPoint<'client, 'device> {
     handle: *mut raw::NMAccessPoint,
 
     /// The device this access point came from
-    #[allow(unused)]
     device: &'device NMDeviceWifi<'client>,
 }

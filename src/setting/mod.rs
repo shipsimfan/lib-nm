@@ -11,7 +11,5 @@ pub struct NMSetting<'connection> {
     object: GObject,
 
     /// The connection this setting is for
-    ///
-    /// If [`None`], this setting is owned by this handle
     connection: Option<&'connection NMConnection>,
 }

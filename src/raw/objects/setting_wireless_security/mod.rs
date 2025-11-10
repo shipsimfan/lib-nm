@@ -4,10 +4,12 @@ use std::ffi::c_void;
 #[allow(unused_imports)]
 use crate::raw::NMSetting;
 
+mod get_psk;
 mod get_type;
 mod new;
 mod properties;
 
+pub use get_psk::nm_setting_wireless_security_get_psk;
 pub use get_type::nm_setting_wireless_security_get_type;
 pub use new::nm_setting_wireless_security_new;
 pub use properties::*;

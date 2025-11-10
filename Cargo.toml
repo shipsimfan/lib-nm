@@ -9,4 +9,5 @@ license = "GPL-3.0-or-later"
 publish = false
 
 [dependencies]
-glib-2.path = "../glib-2"
+glib-2.git = "https://github.com/shipsimfan/glib-2"
+linux.git = "https://github.com/shipsimfan/lib-linux"

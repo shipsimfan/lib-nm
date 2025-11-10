@@ -5,10 +5,17 @@ version = 4
 [[package]]
 name = "glib-2"
 version = "0.1.0"
+source = "git+https://github.com/shipsimfan/glib-2#0be1ad502630785d9fae520492e83434ca543715"
+
+[[package]]
+name = "linux"
+version = "0.1.0"
+source = "git+https://github.com/shipsimfan/lib-linux#d34dd46c35a045bcf2b9c78a3a983641c4c16c5d"
 
 [[package]]
 name = "nm"
 version = "0.1.0"
 dependencies = [
  "glib-2",
+ "linux",
 ]

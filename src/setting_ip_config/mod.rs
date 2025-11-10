@@ -1,6 +1,9 @@
 use crate::NMSetting;
 
+mod addresses;
 mod deref;
+mod dns;
+mod gateway;
 mod get_gtype;
 mod method;
 mod new;

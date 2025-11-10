@@ -3,6 +3,7 @@ use crate::{NMClient, raw};
 mod iter;
 
 mod active_connection;
+mod drop_client;
 mod filter_connections;
 mod get;
 mod iface;

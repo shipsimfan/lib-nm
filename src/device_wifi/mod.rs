@@ -2,6 +2,7 @@ use crate::NMDevice;
 
 mod access_points;
 mod active_access_point;
+mod clone_static;
 mod deref;
 mod new;
 

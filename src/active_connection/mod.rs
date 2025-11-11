@@ -6,6 +6,7 @@ mod connection;
 mod deref;
 mod get;
 mod id;
+mod ip4_config;
 mod new;
 mod on_state_changed;
 

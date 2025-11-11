@@ -1,7 +1,7 @@
 use crate::{NMIPAddress, raw::nm_ip_address_get_address};
 use std::{borrow::Cow, ffi::CStr};
 
-impl<'setting, 'connection> NMIPAddress<'setting, 'connection> {
+impl<'owner, Owner> NMIPAddress<'owner, Owner> {
     /// Gets the IP address property of this address object
     pub fn address(&self) -> Cow<str> {
         self.address_raw().to_string_lossy()

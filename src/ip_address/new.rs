@@ -1,12 +1,12 @@
 use crate::{
-    NMIPAddress, NMSetting,
+    NMIPAddress,
     raw::{self, nm_ip_address_new_binary},
 };
 use glib_2::glib::GError;
 use linux::sys::socket::{AF_INET, AF_INET6};
 use std::{net::IpAddr, ptr::null_mut};
 
-impl<'setting, 'connection> NMIPAddress<'setting, 'connection> {
+impl<'owner, Owner> NMIPAddress<'owner, Owner> {
     /// Creates a new [`NMIPAddress`] object
     pub fn new_binary(address: IpAddr, prefix: glib_2::raw::glib::guint) -> Result<Self, GError> {
         let mut error = null_mut();
@@ -40,7 +40,7 @@ impl<'setting, 'connection> NMIPAddress<'setting, 'connection> {
     /// Create a new [`NMIPAddress`] from a raw `handle`
     pub unsafe fn new_raw(
         handle: *mut raw::NMIPAddress,
-        setting: Option<&'setting NMSetting<'connection>>,
+        setting: Option<&'owner Owner>,
         owned: bool,
     ) -> Self {
         assert_ne!(handle, null_mut());

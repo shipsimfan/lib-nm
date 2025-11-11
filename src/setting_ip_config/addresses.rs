@@ -16,7 +16,7 @@ impl<'connection> NMSettingIPConfig<'connection> {
     }
 
     /// Get the address at index `idx`
-    pub fn address(&self, idx: glib_2::raw::glib::guint) -> Option<NMIPAddress> {
+    pub fn address(&self, idx: glib_2::raw::glib::guint) -> Option<NMIPAddress<NMSettingIPConfig>> {
         let handle = unsafe { nm_setting_ip_config_get_address(self.handle(), idx as _) };
         if handle == null_mut() {
             return None;
@@ -26,7 +26,7 @@ impl<'connection> NMSettingIPConfig<'connection> {
     }
 
     /// Adds a new IP address and associated information to the setting
-    pub fn add_address(&self, address: &NMIPAddress) -> bool {
+    pub fn add_address<Owner>(&self, address: &NMIPAddress<Owner>) -> bool {
         let result = unsafe { nm_setting_ip_config_add_address(self.handle(), address.handle()) };
         result != FALSE
     }

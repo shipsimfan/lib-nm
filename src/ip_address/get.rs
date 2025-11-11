@@ -1,8 +1,8 @@
-use crate::{NMIPAddress, NMSetting, raw};
+use crate::{NMIPAddress, raw};
 
-impl<'setting, 'connection> NMIPAddress<'setting, 'connection> {
+impl<'owner, Owner> NMIPAddress<'owner, Owner> {
     /// Get the [`NMSetting`] this IP address belongs to
-    pub fn setting(&self) -> Option<&'setting NMSetting<'connection>> {
+    pub fn setting(&self) -> Option<&'owner Owner> {
         self.setting
     }
 

@@ -16,7 +16,7 @@ impl<'client> NMDevice<'client> {
         &self,
         iter: &NMRemoteConnectionIter<'client2, Owner>,
     ) -> NMRemoteConnectionIter<'client2, Owner> {
-        let handle = unsafe { nm_device_filter_connections(self.handle, iter.handle()) };
+        let handle = unsafe { nm_device_filter_connections(self.handle(), iter.handle()) };
         unsafe { NMRemoteConnectionIter::new(handle, iter.owner(), true) }
     }
 }

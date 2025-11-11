@@ -9,6 +9,6 @@ impl<'client> NMDevice<'client> {
 
     /// Gets the interface name of the [`NMDevice`] as a raw [`CStr`]
     pub fn iface_raw(&self) -> &CStr {
-        unsafe { CStr::from_ptr(nm_device_get_iface(self.handle)) }
+        unsafe { CStr::from_ptr(nm_device_get_iface(self.handle())) }
     }
 }

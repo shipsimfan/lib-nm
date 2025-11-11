@@ -1,9 +1,11 @@
-use crate::{NMClient, raw};
+use crate::NMClient;
+use glib_2::gobject::GObject;
 
 mod iter;
 
 mod active_connection;
-mod drop_client;
+mod clone_static;
+mod deref;
 mod filter_connections;
 mod get;
 mod iface;
@@ -15,8 +17,8 @@ pub use iter::NMDeviceIter;
 /// A device
 #[derive(Clone)]
 pub struct NMDevice<'client> {
-    /// The handle to underlying device
-    handle: *mut raw::NMDevice,
+    /// The handle to underlying object
+    object: GObject,
 
     /// The client this device came from
     client: Option<&'client NMClient>,

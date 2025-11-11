@@ -2,9 +2,9 @@ use crate::NMDevice;
 
 impl<'client> NMDevice<'client> {
     /// Get this [`NMDevice`] without a client
-    pub unsafe fn drop_client(&self) -> NMDevice<'static> {
+    pub fn clone_static(&self) -> NMDevice<'static> {
         NMDevice {
-            handle: self.handle,
+            object: self.object.clone(),
             client: None,
         }
     }

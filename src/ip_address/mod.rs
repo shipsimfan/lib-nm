@@ -11,7 +11,7 @@ mod prefix;
 pub use iter::NMIPAddressIter;
 
 /// An IP address
-pub struct NMIPAddress<'owner, Owner> {
+pub struct NMIPAddress<'owner, Owner = ()> {
     /// The handle to underlying access point
     handle: *mut raw::NMAccessPoint,
 

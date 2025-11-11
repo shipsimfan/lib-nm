@@ -6,7 +6,7 @@ use glib_2::glib::GError;
 use linux::sys::socket::{AF_INET, AF_INET6};
 use std::{net::IpAddr, ptr::null_mut};
 
-impl<'owner, Owner> NMIPAddress<'owner, Owner> {
+impl NMIPAddress<'static> {
     /// Creates a new [`NMIPAddress`] object
     pub fn new_binary(address: IpAddr, prefix: glib_2::raw::glib::guint) -> Result<Self, GError> {
         let mut error = null_mut();
@@ -36,7 +36,9 @@ impl<'owner, Owner> NMIPAddress<'owner, Owner> {
 
         Ok(unsafe { NMIPAddress::new_raw(handle, None, true) })
     }
+}
 
+impl<'owner, Owner> NMIPAddress<'owner, Owner> {
     /// Create a new [`NMIPAddress`] from a raw `handle`
     pub unsafe fn new_raw(
         handle: *mut raw::NMIPAddress,

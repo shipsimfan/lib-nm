@@ -4,6 +4,7 @@ mod iter;
 
 mod clone_static;
 mod commit_changes;
+mod delete;
 mod deref;
 mod get;
 mod new;

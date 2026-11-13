@@ -3,7 +3,7 @@ use std::ptr::null_mut;
 
 impl<'owner, Owner> NMActiveConnection<'owner, Owner> {
     /// Gets the current IPv4 [`NMIPConfig`] associated with the [`NMActiveConnection`]
-    pub fn ip4_config(&self) -> Option<NMIPConfig<Self>> {
+    pub fn ip4_config<'a>(&'a self) -> Option<NMIPConfig<'a, Self>> {
         let handle = unsafe { nm_active_connection_get_ip4_config(self.handle()) };
         if handle == null_mut() {
             return None;

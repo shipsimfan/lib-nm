@@ -4,7 +4,7 @@ use std::ptr::null_mut;
 
 impl<'client, 'device> NMAccessPoint<'client, 'device> {
     /// Get the SSID of the access point
-    pub fn ssid(&self) -> Option<GBytes> {
+    pub fn ssid<'a>(&'a self) -> Option<GBytes<'a>> {
         let handle = unsafe { nm_access_point_get_ssid(self.handle) };
         if handle == null_mut() {
             return None;

@@ -3,7 +3,7 @@ use std::{borrow::Cow, ffi::CStr};
 
 impl<'client, 'device> NMAccessPoint<'client, 'device> {
     /// Gets the Basic Service Set ID (BSSID) of the Wi-Fi access point
-    pub fn bssid(&self) -> Cow<str> {
+    pub fn bssid<'a>(&'a self) -> Cow<'a, str> {
         self.bssid_raw().to_string_lossy()
     }
 

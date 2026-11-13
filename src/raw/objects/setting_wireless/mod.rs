@@ -4,12 +4,14 @@ use std::ffi::c_void;
 #[allow(unused_imports)]
 use crate::raw::NMSetting;
 
+mod get_mac_address;
 mod get_ssid;
 mod get_type;
 mod modes;
 mod new;
 mod properties;
 
+pub use get_mac_address::nm_setting_wireless_get_mac_address;
 pub use get_ssid::nm_setting_wireless_get_ssid;
 pub use get_type::nm_setting_wireless_get_type;
 pub use modes::*;

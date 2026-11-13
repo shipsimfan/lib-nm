@@ -20,7 +20,7 @@ impl<'connection> NMSettingIPConfig<'connection> {
     }
 
     /// Get the DNS server at index `idx`
-    pub fn dns(&self, idx: glib_2::raw::glib::guint) -> Option<Cow<str>> {
+    pub fn dns<'a>(&'a self, idx: glib_2::raw::glib::guint) -> Option<Cow<'a, str>> {
         self.dns_raw(idx).map(CStr::to_string_lossy)
     }
 

@@ -7,7 +7,7 @@ use crate::NMSettingConnection;
 
 impl NMConnection {
     /// A shortcut to return the UUID from the connection's [`NMSettingConnection`]
-    pub fn uuid(&self) -> Cow<str> {
+    pub fn uuid<'a>(&'a self) -> Cow<'a, str> {
         self.uuid_raw().to_string_lossy()
     }
 

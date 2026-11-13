@@ -10,7 +10,7 @@ use std::{
 
 impl<'connection> NMSettingWirelessSecurity<'connection> {
     /// Get the pre-shared key for wireless connections
-    pub fn psk(&self) -> Option<Cow<str>> {
+    pub fn psk<'a>(&'a self) -> Option<Cow<'a, str>> {
         self.psk_raw().map(CStr::to_string_lossy)
     }
 

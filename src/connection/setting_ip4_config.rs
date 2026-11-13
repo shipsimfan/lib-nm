@@ -3,7 +3,9 @@ use std::ptr::null_mut;
 
 impl NMConnection {
     /// A shortcut to return any [`NMSettingIP4Config`] the connection might contain.
-    pub fn setting_ip4_config(&self) -> Option<NMSettingIP4Config> {
+    pub fn setting_ip4_config<'connection>(
+        &'connection self,
+    ) -> Option<NMSettingIP4Config<'connection>> {
         let handle = unsafe { nm_connection_get_setting_ip4_config(self.handle()) };
         if handle == null_mut() {
             return None;

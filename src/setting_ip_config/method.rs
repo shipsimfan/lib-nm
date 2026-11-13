@@ -9,7 +9,7 @@ use std::{
 
 impl<'connection> NMSettingIPConfig<'connection> {
     /// Get the method used to get and set the IP config
-    pub fn method(&self) -> Option<Cow<str>> {
+    pub fn method<'a>(&'a self) -> Option<Cow<'a, str>> {
         self.method_raw().map(CStr::to_string_lossy)
     }
 

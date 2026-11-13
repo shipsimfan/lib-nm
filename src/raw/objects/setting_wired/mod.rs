@@ -4,8 +4,10 @@ use std::ffi::c_void;
 #[allow(unused_imports)]
 use crate::raw::NMSetting;
 
+mod get_mac_address;
 mod get_type;
 
+pub use get_mac_address::nm_setting_wired_get_mac_address;
 pub use get_type::nm_setting_wired_get_type;
 
 /// Describes connection properties for Ethernet-based networks

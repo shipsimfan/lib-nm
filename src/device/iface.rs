@@ -3,7 +3,7 @@ use std::{borrow::Cow, ffi::CStr};
 
 impl<'client> NMDevice<'client> {
     /// Gets the interface name of the [`NMDevice`]
-    pub fn iface(&self) -> Cow<str> {
+    pub fn iface<'a>(&'a self) -> Cow<'a, str> {
         self.iface_raw().to_string_lossy()
     }
 

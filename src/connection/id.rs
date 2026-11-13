@@ -7,7 +7,7 @@ use crate::NMSettingConnection;
 
 impl NMConnection {
     /// A shortcut to return the ID from the connection's [`NMSettingConnection`]
-    pub fn id(&self) -> Cow<str> {
+    pub fn id<'a>(&'a self) -> Cow<'a, str> {
         self.id_raw().to_string_lossy()
     }
 

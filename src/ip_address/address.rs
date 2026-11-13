@@ -3,7 +3,7 @@ use std::{borrow::Cow, ffi::CStr};
 
 impl<'owner, Owner> NMIPAddress<'owner, Owner> {
     /// Gets the IP address property of this address object
-    pub fn address(&self) -> Cow<str> {
+    pub fn address<'a>(&'a self) -> Cow<'a, str> {
         self.address_raw().to_string_lossy()
     }
 

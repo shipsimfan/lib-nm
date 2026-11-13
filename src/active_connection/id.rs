@@ -3,7 +3,7 @@ use std::{borrow::Cow, ffi::CStr};
 
 impl<'owner, Owner> NMActiveConnection<'owner, Owner> {
     /// Gets the [`NMActiveConnection`]'s ID
-    pub fn id(&self) -> Cow<str> {
+    pub fn id<'a>(&'a self) -> Cow<'a, str> {
         self.id_raw().to_string_lossy()
     }
 

@@ -2,6 +2,7 @@ use crate::NMSetting;
 
 mod deref;
 mod get_gtype;
+mod mac_address;
 mod mode;
 mod new;
 mod ssid;

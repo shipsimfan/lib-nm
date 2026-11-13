@@ -7,7 +7,7 @@ use crate::NMSettingConnection;
 
 impl NMConnection {
     /// A shortcut to return the type from the connection's [`NMSettingConnection`]
-    pub fn connection_type(&self) -> Cow<str> {
+    pub fn connection_type<'a>(&'a self) -> Cow<'a, str> {
         self.connection_type_raw().to_string_lossy()
     }
 

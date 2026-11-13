@@ -10,7 +10,7 @@ use std::{
 
 impl<'connection> NMSettingIPConfig<'connection> {
     /// Get the IP address of the gateway
-    pub fn gateway(&self) -> Option<Cow<str>> {
+    pub fn gateway<'a>(&'a self) -> Option<Cow<'a, str>> {
         self.gateway_raw().map(CStr::to_string_lossy)
     }
 

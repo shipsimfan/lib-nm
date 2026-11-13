@@ -8,6 +8,7 @@ mod new;
 mod remove_setting;
 mod setting_connection;
 mod setting_ip4_config;
+mod setting_wired;
 mod setting_wireless;
 mod setting_wireless_security;
 mod uuid;

@@ -3,7 +3,7 @@ use std::{borrow::Cow, ffi::CStr, ptr::null};
 
 impl NMClient {
     /// Get the version of NetworkManager this client is connected to, if it is
-    pub fn version(&self) -> Option<Cow<str>> {
+    pub fn version<'a>(&'a self) -> Option<Cow<'a, str>> {
         self.version_raw().map(CStr::to_string_lossy)
     }
 

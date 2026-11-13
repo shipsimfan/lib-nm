@@ -2,7 +2,7 @@ use crate::{NMAccessPoint, NMDevice, raw};
 
 impl<'client, 'device> NMAccessPoint<'client, 'device> {
     /// Get the [`NMDevice`] this access point belongs to
-    pub fn device(&self) -> &'device NMDevice {
+    pub fn device(&self) -> &'device NMDevice<'client> {
         self.device
     }
 

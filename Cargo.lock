@@ -14,7 +14,7 @@ source = "git+https://github.com/shipsimfan/lib-linux#d34dd46c35a045bcf2b9c78a3a
 
 [[package]]
 name = "nm"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "glib-2",
  "linux",

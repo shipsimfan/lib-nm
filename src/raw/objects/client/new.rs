@@ -3,7 +3,7 @@ use glib_2::raw::{gio::GCancellable, glib::GError};
 
 // rustdoc imports
 #[allow(unused_imports)]
-use glib_2::raw::gobject::GObject;
+use glib_2::raw::{glib::GMainContext, gobject::GObject};
 #[allow(unused_imports)]
 use std::ptr::null_mut;
 

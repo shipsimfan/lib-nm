@@ -60,7 +60,7 @@ pub trait NMActiveConnectionStateChangedCallback {
         data.into_ptr();
     }
 
-    /// Implements a [`raw::gobject::GClosureNotify`] for dropping the user data
+    /// Implements a [`glib_2::raw::gobject::GClosureNotify`] for dropping the user data
     extern "C" fn drop(data: glib_2::raw::glib::gpointer, _: *mut glib_2::raw::gobject::GClosure) {
         drop(unsafe { Self::UserData::from_ptr(data) });
     }

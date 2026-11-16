@@ -2,7 +2,7 @@ use std::ffi::c_void;
 
 // rustdoc imports
 #[allow(unused_imports)]
-use crate::raw::NMSettingIP4Config;
+use crate::raw::{NMSettingIP4Config, NMSettingIP6Config};
 
 mod add_address;
 mod add_dns;

@@ -6,7 +6,7 @@ unsafe extern "C" {
     /// # Parameters
     ///  * `setting` - the [`NMSettingWired`]
     ///
-    /// # Return Value
+    /// # Returns
     ///  the “mac-address” property of the setting
     pub fn nm_setting_wired_get_mac_address(setting: *mut NMSettingWired) -> *const c_char;
 }

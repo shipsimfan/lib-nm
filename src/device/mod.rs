@@ -8,6 +8,7 @@ mod clone_static;
 mod deref;
 mod filter_connections;
 mod get;
+mod hw_address;
 mod iface;
 mod new;
 mod r#type;

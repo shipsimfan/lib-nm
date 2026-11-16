@@ -10,7 +10,7 @@ unsafe extern "C" {
     /// # Parameters
     ///  * `setting` - the [`NMSettingIPConfig`]
     ///
-    /// # Return Value
+    /// # Returns
     /// the IP address of the gateway associated with this configuration, or [`null`].
     pub fn nm_setting_ip_config_get_gateway(setting: *mut NMSettingIPConfig) -> *const c_char;
 }
